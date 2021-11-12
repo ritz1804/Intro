@@ -6,8 +6,7 @@ class Word {
   parse () {
     let raw = this.raw
     let url
-    
-    // check if has url
+   
     const hasUrl = this.raw.match(/\((.*)\)(.+)/i)
     if (hasUrl) {
       url = hasUrl[1]
@@ -19,7 +18,7 @@ class Word {
     let slide = { }
     for (let modifier of modifiers) {
       if (modifier.condition(withSpaces)) {
-        slide = modifier.modify(withSpaces) // apply a class
+        slide = modifier.modify(withSpaces) 
         break
       }
     }
@@ -33,7 +32,7 @@ export default class Sentence {
   constructor (sentence) { this.sentence = sentence }
 
   parse () {
-    const words = this.sentence.split(' ').map(word => new Word(word)) // sépare les mots
+    const words = this.sentence.split(' ').map(word => new Word(word)) 
     const slides = words.map(word => word.parse())
     return slides
   }
