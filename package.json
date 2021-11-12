@@ -1,0 +1,25 @@
+{
+  "name": "ritesh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html --public-url .",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "",
+  "license": "",
+  "private": false,
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.1",
+    "gh-pages": "^2.0.1",
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.43.4"
+  },
+  "keywords": [],
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
